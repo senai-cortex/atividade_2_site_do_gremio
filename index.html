@@ -1,50 +1,190 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCIDADE - Corridas Automotivas</title>
     <link rel="stylesheet" href="style.css">
-    <title>Site do Grêmio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-
-        <div id="navbar">
-            
-            <a href="https://www.youtube.com/watch?v=216zfiZNSaU"> 
-                <img id="icon" src="assets/icon.svg" alt="Ícone do Grêmio">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">VELOCIDADE</span>
             </a>
-
-            <h2> Site de Notícias do Grêmio</h2>
-
-            <ul id="links">
-                <li>Arquivos</li>
-                <li>Clube</li>
-                <li>Sair</li>
-            </ul>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#cars" class="nav-link">Carros</a></li>
+                    <li><a href="#tracks" class="nav-link">Pistas</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                </ul>
+            </nav>
         </div>
-
     </header>
-    <main>
 
-        <section class="noticias">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">A</span>
+                <span class="title-line">VELOCIDADE</span>
+                <span class="title-line">NÃO</span>
+                <span class="title-line">ESPERA</span>
+            </h1>
+            <p class="hero-subtitle">Explore os maiores carros e pistas da história do automobilismo</p>
+            <a href="#cars" class="cta-button">
+                <span class="cta-text">Explorar</span>
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
 
-            <div class="noticia">
-                <img class="img_noticia" src="assets/n1.jpg" alt="Senhor Representante do Grêmio">
-                <h3>Grêmio sobe para a Série A</h3>
-                <p>Um milagre!</p>
-            </div>
+    <!-- Seção Carros -->
+    <section class="cars-section" id="cars">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-accent">▌</span>
+                Galeria de Carros
+            </h2>
+            <p class="section-subtitle">As máquinas mais icônicas da história das corridas</p>
             
-            <div class="noticia">
-                <img class="img_noticia" src="assets/n2.jpg" alt="Senhor Representante do Grêmio">
-                <h3>Grêmio cai para a Série B</h3>
-                <p>Não estou suportando mais!</p>
+            <div class="cars-grid">
+                <!-- Carro 1 - Porsche 919 Hybrid -->
+                <article class="car-card">
+                    <div class="card-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOFzqnIgp78gKVU93O1iQczcpLzDviqJ1fA&s" alt="Porsche 919 Hybrid">
+                        <div class="card-overlay">
+                            <span class="card-category">Le Mans</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Porsche 919 Hybrid</h3>
+                        <p class="card-info">Categoria: Le Mans Hypercar</p>
+                    </div>
+                </article>
+
+                <!-- Carro 2 - BMW M4 GT3 -->
+                <article class="car-card">
+                    <div class="card-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRUecX8jAf0CQnygShtlaisnx9FOvZhS8YLA&s" alt="BMW M4 GT3">
+                        <div class="card-overlay">
+                            <span class="card-category">GT3</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">BMW M4 GT3</h3>
+                        <p class="card-info">Categoria: GT3 - Nordschleife</p>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- Seção Pistas -->
+    <section class="tracks-section" id="tracks">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-accent">▌</span>
+                Pistas Lendárias
+            </h2>
+            <p class="section-subtitle">Os circuitos onde a lenda é forjada</p>
+            
+            <div class="tracks-grid">
+                <!-- Pista 1 - Nurburgring -->
+                <article class="track-card">
+                    <div class="track-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ4jTfDAa7NF3Gl0vMw_QpUecj7-DSoeHsCw&s" alt="Nurburgring">
+                        <div class="track-overlay">
+                            <div class="track-info">
+                                <span class="track-country">Alemanha</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-content">
+                        <h3 class="track-title">Nurburgring Nordschleife</h3>
+                        <p class="track-length">20.830 km</p>
+                    </div>
+                </article>
 
-    </main>
-    <footer>
-        <p> Todos os direitos reservados ao professor Ícaro. </p>
+                <!-- Pista 2 - Le Mans -->
+                <article class="track-card">
+                    <div class="track-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0y2pCa6ROtLb5Xhx_lQIQl5RNkZgK8KVnFQ&s" alt="Le Mans">
+                        <div class="track-overlay">
+                            <div class="track-info">
+                                <span class="track-country">França</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-content">
+                        <h3 class="track-title">Circuit de la Sarthe</h3>
+                        <p class="track-length">13.626 km</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">
+                    <span class="title-accent">▌</span>
+                    Sobre o Site
+                </h2>
+                <p class="about-text">
+                    Este é um tributo aos maiores marcos da história do automobilismo. 
+                    Aqui você encontra os carros que escreveram seus nomes na lenda e 
+                    as pistas que testaram os limites da velocidade humana.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Carros Icônicos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Pistas Lendárias</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Anos de História</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">⚡ VELOCIDADE</span>
+                <p class="footer-tagline">A paixão pela velocidade</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="YouTube">📺</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Velocidade. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
