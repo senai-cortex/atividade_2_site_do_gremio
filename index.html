@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELOCIDADE - Corridas Automotivas</title>
+    <title> CARS - Automotive races</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <div class="header-container">
             <a href="#" class="logo">
                 <span class="logo-icon">⚡</span>
-                <span class="logo-text">VELOCIDADE</span>
+                <span class="logo-text">CU</span>
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -57,34 +57,39 @@
             </h2>
             <p class="section-subtitle">As máquinas mais icônicas da história das corridas</p>
             
-            <div class="cars-grid">
+            <div class="cars-carousel">
                 <!-- Carro 1 - Porsche 919 Hybrid -->
-                <article class="car-card">
-                    <div class="card-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOFzqnIgp78gKVU93O1iQczcpLzDviqJ1fA&s" alt="Porsche 919 Hybrid">
-                        <div class="card-overlay">
-                            <span class="card-category">Le Mans</span>
+                <div class="car-item active" data-model3d="assets/Cars/porsche 919 hybrid-modelo-otimizado.glb">
+                    <div class="car-image-container">
+                        <img src="assets/Cars/Porsche 919 hybrid.webp" alt="Porsche 919 Hybrid" class="car-image">
+                        <div class="car-overlay">
+                            <span class="car-category">Le Mans</span>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Porsche 919 Hybrid</h3>
-                        <p class="card-info">Categoria: Le Mans Hypercar</p>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche 919 Hybrid</h3>
+                        <p class="car-info">Categoria: Le Mans Hypercar</p>
                     </div>
-                </article>
+                </div>
 
-                <!-- Carro 2 - BMW M4 GT3 -->
-                <article class="car-card">
-                    <div class="card-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRUecX8jAf0CQnygShtlaisnx9FOvZhS8YLA&s" alt="BMW M4 GT3">
-                        <div class="card-overlay">
-                            <span class="card-category">GT3</span>
+                <!-- Carro 2 - Porsche 911 GT3 RS -->
+                <div class="car-item" data-model3d="assets/Cars/porsche_gt3-otimizado2.glb">
+                    <div class="car-image-container">
+                        <img src="assets/Cars/porsche-911-gt3-rs-12.webp" alt="Porsche 911 GT3 RS" class="car-image">
+                        <div class="car-overlay">
+                            <span class="car-category">GT3</span>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">GT3 CARS</h3>
-                        <p class="card-info">Categoria: GT3 - Nordschleife</p>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche 911 GT3 RS</h3>
+                        <p class="car-info">Categoria: GT3 - Nordschleife</p>
                     </div>
-                </article>
+                </div>
+            </div>
+            
+            <div class="carousel-dots cars-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
@@ -98,38 +103,39 @@
             </h2>
             <p class="section-subtitle">Os circuitos onde a lenda é forjada</p>
             
-            <div class="tracks-grid">
-                <!-- Pista 1 - Nurburgring -->
-                <article class="track-card">
-                    <div class="track-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ4jTfDAa7NF3Gl0vMw_QpUecj7-DSoeHsCw&s" alt="Nurburgring">
-                        <div class="track-overlay">
-                            <div class="track-info">
-                                <span class="track-country">Alemanha</span>
-                            </div>
+            <div class="pistas-carousel">
+                <!-- Nurburgring -->
+                <div class="pista-item active">
+                    <div class="pista-image-container">
+                        <img src="assets/Pistas/nurburgring1.webp" alt="Nurburgring" class="pista-image">
+                        <div class="pista-overlay">
+                            <span class="pista-country">Alemanha</span>
                         </div>
                     </div>
-                    <div class="track-content">
-                        <h3 class="track-title">Nurburgring Nordschleife</h3>
-                        <p class="track-length">20.830 km</p>
+                    <div class="pista-content">
+                        <h3 class="pista-title">Nurburgring Nordschleife</h3>
+                        <p class="pista-length">20.830 km</p>
                     </div>
-                </article>
+                </div>
 
-                <!-- Pista 2 - Le Mans -->
-                <article class="track-card">
-                    <div class="track-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0y2pCa6ROtLb5Xhx_lQIQl5RNkZgK8KVnFQ&s" alt="Le Mans">
-                        <div class="track-overlay">
-                            <div class="track-info">
-                                <span class="track-country">França</span>
-                            </div>
+                <!-- Le Mans -->
+                <div class="pista-item">
+                    <div class="pista-image-container">
+                        <img src="assets/Pistas/le mans1.webp" alt="Le Mans" class="pista-image">
+                        <div class="pista-overlay">
+                            <span class="pista-country">França</span>
                         </div>
                     </div>
-                    <div class="track-content">
-                        <h3 class="track-title">Circuit de la Sarthe</h3>
-                        <p class="track-length">13.626 km</p>
+                    <div class="pista-content">
+                        <h3 class="pista-title">Circuit de la Sarthe</h3>
+                        <p class="pista-length">13.626 km</p>
                     </div>
-                </article>
+                </div>
+            </div>
+            
+            <div class="carousel-dots pistas-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
@@ -182,5 +188,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="lightbox.js"></script>
 </body>
 </html>

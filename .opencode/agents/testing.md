@@ -1,3 +1,10 @@
+---
+name: "testing"
+description: "Clear description of what the agent does and when it should be used"
+mode: subagent
+color: "#FF0000"
+---
+
 # Testing Agent
 
 ## Purpose

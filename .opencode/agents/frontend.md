@@ -102,10 +102,7 @@ Includes:
 
 HTML  
 CSS  
-JavaScript / TypeScript  
-React / Vue / Angular frameworks  
-Client-side routing  
-Client-side data handling
+JavaScript 
 
 ## Out of Scope
 
