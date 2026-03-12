@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> CARS - Automotive races</title>
+    <title>CARS - Automotive races</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script nomodule src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script type="module">
+        window.modelViewerLoaded = true;
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('model-viewer').forEach(mv => {
+                    mv.addEventListener('load', () => {
+                        const container = mv.parentElement;
+                        const loading = container.querySelector('.model-loading');
+                        if (loading) loading.style.display = 'none';
+                    });
+                    mv.addEventListener('error', () => {
+                        const container = mv.parentElement;
+                        const loading = container.querySelector('.model-loading');
+                        if (loading) loading.textContent = 'Erro ao carregar';
+                    });
+                });
+            }, 1000);
+        });
+    </script>
 </head>
 <body>
-    <!-- Header -->
     <header class="header" id="header">
         <div class="header-container">
             <a href="#" class="logo">
                 <span class="logo-icon">⚡</span>
-                <span class="logo-text">CU</span>
+                <span class="logo-text">RACES</span>
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -27,7 +46,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background">
             <div class="hero-gradient"></div>
@@ -48,7 +66,6 @@
         </div>
     </section>
 
-    <!-- Seção Carros -->
     <section class="cars-section" id="cars">
         <div class="section-container">
             <h2 class="section-title">
@@ -57,13 +74,13 @@
             </h2>
             <p class="section-subtitle">As máquinas mais icônicas da história das corridas</p>
             
-            <div class="cars-carousel">
-                <!-- Carro 1 - Porsche 919 Hybrid -->
-                <div class="car-item active" data-model3d="assets/Cars/porsche 919 hybrid-modelo-otimizado.glb">
+            <div class="cars-grid">
+                <div class="car-card" data-model3d="assets/Cars/porsche_919_hybrid/porsche_919_hybrid_2017.gltf">
                     <div class="car-image-container">
                         <img src="assets/Cars/Porsche 919 hybrid.webp" alt="Porsche 919 Hybrid" class="car-image">
                         <div class="car-overlay">
                             <span class="car-category">Le Mans</span>
+                            <button class="view-3d-btn">🎯 Ver 3D</button>
                         </div>
                     </div>
                     <div class="car-content">
@@ -72,12 +89,12 @@
                     </div>
                 </div>
 
-                <!-- Carro 2 - Porsche 911 GT3 RS -->
-                <div class="car-item" data-model3d="assets/Cars/porsche_gt3-otimizado2.glb">
+                <div class="car-card" data-model3d="assets/Cars/porsche_gt3_rs/scene.gltf">
                     <div class="car-image-container">
                         <img src="assets/Cars/porsche-911-gt3-rs-12.webp" alt="Porsche 911 GT3 RS" class="car-image">
                         <div class="car-overlay">
                             <span class="car-category">GT3</span>
+                            <button class="view-3d-btn">🎯 Ver 3D</button>
                         </div>
                     </div>
                     <div class="car-content">
@@ -86,15 +103,9 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="carousel-dots cars-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-            </div>
         </div>
     </section>
 
-    <!-- Seção Pistas -->
     <section class="tracks-section" id="tracks">
         <div class="section-container">
             <h2 class="section-title">
@@ -103,9 +114,8 @@
             </h2>
             <p class="section-subtitle">Os circuitos onde a lenda é forjada</p>
             
-            <div class="pistas-carousel">
-                <!-- Nurburgring -->
-                <div class="pista-item active">
+            <div class="pistas-grid">
+                <div class="pista-card">
                     <div class="pista-image-container">
                         <img src="assets/Pistas/nurburgring1.webp" alt="Nurburgring" class="pista-image">
                         <div class="pista-overlay">
@@ -118,8 +128,7 @@
                     </div>
                 </div>
 
-                <!-- Le Mans -->
-                <div class="pista-item">
+                <div class="pista-card">
                     <div class="pista-image-container">
                         <img src="assets/Pistas/le mans1.webp" alt="Le Mans" class="pista-image">
                         <div class="pista-overlay">
@@ -132,15 +141,9 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="carousel-dots pistas-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-            </div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-content">
@@ -171,7 +174,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
